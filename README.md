@@ -19,6 +19,10 @@ The player controls a spaceship using the **WASD** keys, navigating through spac
 The game uses a public exoplanet API to generate unique planet names:
 
 ```python
+EXOPLANET_API = (
+    "https://exoplanetarchive.ipac.caltech.edu/TAP/sync"
+    "?query=select+pl_name+from+ps&format=json"
+)
 # Get exoplanet names from the API
 try:
     req = urllib.request.Request(EXOPLANET_API, headers={'User-Agent': 'Mozilla/5.0'})
