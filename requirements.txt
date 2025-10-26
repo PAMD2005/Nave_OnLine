@@ -1,0 +1,7 @@
+Feito no VS Comm com o Python 3.9 64Bit.
+pillow 11.2.1
+pip 25.1.1
+pygame 2.6.1
+setuptools 58.1.0
+
+Necessário instalar a Font "Orbitron-Regular.ttf" para funcionar.
