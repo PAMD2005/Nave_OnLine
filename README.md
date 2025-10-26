@@ -1,30 +1,30 @@
 # 🚀 Nave OnLine
 
-**Nave OnLine** é um jogo arcade desenvolvido em **Python** usando **Tkinter**.  
-O jogador controla uma nave espacial usando as teclas **WASD**, navegando pelo espaço para capturar planetas e avançar pelos níveis.
+**Nave OnLine** is an arcade-style game developed in **Python** using **Tkinter**.  
+The player controls a spaceship using the **WASD** keys, navigating through space to capture planets and advance through levels.
 
-## 🕹️ Como Jogar
-- Use as teclas **W**, **A**, **S**, **D** para mover a nave.  
-- Capture planetas para avançar de nível.  
-- No estágio final, sobreviva à **chuva de meteoros** pelo maior tempo possível.
+## 🕹️ How to Play
+- Use the **W**, **A**, **S**, **D** keys to move the spaceship.  
+- Capture planets to progress to the next level.  
+- In the final stage, survive the **meteor shower** for as long as possible.
 
-## ✨ Funcionalidades
-- Construído inteiramente com **Python** e **Tkinter**.  
-- Controles suaves com WASD.  
-- Dificuldade progressiva: planetas crescem e se movem mais rápido a cada nível.  
-- Estágio final de sobrevivência com meteoros.  
-- **Nomes de planetas gerados dinamicamente usando uma API de exoplanetas**, proporcionando diversidade e autenticidade no jogo.  
+## ✨ Features
+- Fully built with **Python** and **Tkinter**.  
+- Smooth WASD controls.  
+- Progressive difficulty: planets grow larger and move faster with each level.  
+- Final survival stage with meteor showers.  
+- **Planet names dynamically generated using an exoplanet API**, adding diversity and authenticity to the game.
 
-## ⚙️ Sobre a API de Planetas
-O jogo usa uma API pública de exoplanetas para gerar nomes únicos para os planetas:
+## ⚙️ About the Planet API
+The game uses a public exoplanet API to generate unique planet names:
 
 ```python
-# Obtem os nomes de exoplanetas da API
+# Get exoplanet names from the API
 try:
     req = urllib.request.Request(EXOPLANET_API, headers={'User-Agent': 'Mozilla/5.0'})
     with urllib.request.urlopen(req, timeout=10) as resp:
-        dados = json.load(resp)
-    self.nomes_exo = list({item["pl_name"] for item in dados})
+        data = json.load(resp)
+    self.exo_names = list({item["pl_name"] for item in data})
 except:
-    # Lista reserva caso a API falhe
-    self.nomes_exo = ["Kepler-22b", "Proxima Centauri b", "TRAPPIST-1e", "HD 209458 b"]
+    # Fallback list in case the API fails
+    self.exo_names = ["Kepler-22b", "Proxima Centauri b", "TRAPPIST-1e", "HD 209458 b"]
