@@ -16,7 +16,7 @@ The player controls a spaceship using the **WASD** keys, navigating through spac
 - **Planet names dynamically generated using an exoplanet API**, adding diversity and authenticity to the game.
 
 ## ⚙️ About the Planet API
-The game uses a public exoplanet API to generate unique planet names:
+The game uses a public API to generate unique planet names, fetching them dynamically from NASA's Exoplanet Archive. A fallback list is used if the API is unavailable.
 
 ```python
 EXOPLANET_API = (
